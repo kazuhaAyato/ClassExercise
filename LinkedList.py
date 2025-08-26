@@ -98,31 +98,36 @@ class LinkedList_V1:
             s = self.Pointers[s]
             if s == self.End:
                 return
-#test
-#I Love Console Interface
-linkedlist = LinkedList_V2(Node("a",-1))
-while True:
-    cmd = input("Please Input")
-    match cmd:
-        case "a":
-            a = input("Append What")
-            linkedlist.add_element(a)
-            print(f"OK, Added")
-        case "d":
-            d = input("Delete What")
-            print("Trying to Remove ELEMENT" + d)
-            linkedlist.remove_element(d)
-        case "p":
-            linkedlist.output()
-        case "s":
-            s = input("Search What")
-            print(linkedlist.find(s))
-        case "l":
-            with open("person.pickle", "rb") as file:
-                linkedlist = pickle.load(file)
-        case "i":
-            s = input("INSERT What")
-            a = int(input("INSERT WHERE"))
-            linkedlist.insert_element(a,s)
-    with open("person.pickle", "wb") as f:
-        pickle.dump(linkedlist,f)
+
+
+
+
+if __name__ == "__main__":
+    # test
+    # I Love Console Interface
+    linkedlist = LinkedList_V2(Node("a", -1))
+    while True:
+        cmd = input("Please Input")
+        match cmd:
+            case "a":
+                a = input("Append What")
+                linkedlist.add_element(a)
+                print(f"OK, Added")
+            case "d":
+                d = input("Delete What")
+                print("Trying to Remove ELEMENT" + d)
+                linkedlist.remove_element(d)
+            case "p":
+                linkedlist.output()
+            case "s":
+                s = input("Search What")
+                print(linkedlist.find(s))
+            case "l":
+                with open("person.pickle", "rb") as file:
+                    linkedlist = pickle.load(file)
+            case "i":
+                s = input("INSERT What")
+                a = int(input("INSERT WHERE"))
+                linkedlist.insert_element(a, s)
+        with open("person.pickle", "wb") as f:
+            pickle.dump(linkedlist, f)

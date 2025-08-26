@@ -1,5 +1,7 @@
 import time
 
+import TestDataGen
+
 
 def binary_search(arr,target):
     # Function to perform binary search on a sorted array
@@ -14,5 +16,9 @@ def binary_search(arr,target):
             left = mid
     return left if arr[left] == target else -1
 
-arrN=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-print(binary_search(arrN,5))
+if __name__ == "__main__":
+    arrN = TestDataGen.random_int_list(0,95020,5990)
+    arrN.sort(reverse=1)
+    print(
+        binary_search(arrN,int(input("bSearch What")))
+    )

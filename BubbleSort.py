@@ -12,5 +12,6 @@ def bubble_sort(arr):
                 sort = False
         n=n+1
     return arr
-a = TestDataGen.random_int_list(1,100,50)
-print(bubble_sort(a))
+if __name__ == "__main__":
+    a = TestDataGen.random_int_list(1, 100, 50)
+    print(bubble_sort(a))

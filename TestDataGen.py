@@ -6,3 +6,6 @@ def random_int_list(start, stop, length):
     for i in range(length):
         random_list.append(random.randint(start, stop))
     return random_list
+if __name__ == "__main__":
+    for i in range(random.randint(10,120)):
+        print(random_int_list(random.randint(0,100),random.randint(1000,5000),random.randint(50,4000)))
